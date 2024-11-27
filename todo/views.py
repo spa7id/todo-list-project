@@ -4,8 +4,9 @@ from .forms import TaskForm, TagForm
 
 # Відображення домашньої сторінки
 def home(request):
-    tasks = Task.objects.filter(is_done=False).order_by('-created_at')  # Завдання, які не виконані
+    tasks = Task.objects.all().order_by('-created_at')
     return render(request, 'todo/home.html', {'tasks': tasks})
+
 
 # Створення завдання
 def task_add(request):
@@ -39,9 +40,10 @@ def task_delete(request, pk):
 # Зміна статусу завдання (Complete/Undo)
 def task_complete(request, pk):
     task = get_object_or_404(Task, pk=pk)
-    task.is_done = not task.is_done
-    task.save()
+    task.is_done = not task.is_done  # Перемикаємо статус
+    task.save()  # Зберігаємо зміни в базі даних
     return redirect('home')
+
 
 # Сторінка для списку тегів
 def tag_list(request):
