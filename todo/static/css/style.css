@@ -1,0 +1,76 @@
+/* static/css/styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.task-list {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.task-item {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-item h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.task-item .status {
+  font-weight: bold;
+  color: red;
+}
+
+.task-item .status.done {
+  color: green;
+}
+
+.task-item .tag {
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  padding: 3px 8px;
+  margin-right: 5px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.button.delete {
+  background-color: #dc3545;
+}
+
+.button.complete {
+  background-color: #28a745;
+}
+
+.button.undo {
+  background-color: #6c757d;
+}
+
+.button.add-task {
+  display: block;
+  width: 150px;
+  margin: 20px auto;
+  background-color: #007bff;
+  text-align: center;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
